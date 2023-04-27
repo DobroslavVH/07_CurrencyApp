@@ -4,16 +4,14 @@ export const INITIAL_STATE = {
     selectedCurrency: 'USD',
     secondaryCurrency: '',
     tickers: [],
-    selectedDate: dayjs(new Date).toISOString(),
-    exchangeTransactions: []
+    selectedDate: dayjs(new Date).toISOString()
 }
 
 export const ACTIONS = {
     SET_CURRENCY: 'set-currency',
     SET_SECONDARY_CURRENCY: 'set-secondary-currency',
     SET_TICKERS: 'set-tickers',
-    SET_DATE: 'set-date',
-    SET_EXCHANGE_TRANSACTIONS: 'set-exchange-transactions'
+    SET_DATE: 'set-date'
 }
 
 export default (state, actions) => {
@@ -43,12 +41,6 @@ export default (state, actions) => {
             return {
                 ...state,
                 selectedDate: payload
-            }
-
-        case ACTIONS.SET_EXCHANGE_TRANSACTIONS:
-            return {
-                ...state,
-                exchangeTransactions: [...state.exchangeTransactions, payload]
             }
 
         default:

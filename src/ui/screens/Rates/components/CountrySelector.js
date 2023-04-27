@@ -1,4 +1,4 @@
-import { Animated, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Animated, Text, TouchableOpacity, View } from 'react-native'
 import React, { useContext, useState } from 'react'
 import { StyleSheet } from 'react-native'
 import { colors } from '../../../core/constants/colors'
@@ -43,7 +43,7 @@ const CountrySelector = () => {
             </TouchableOpacity>
         )
     }
-    console.log(searchText)
+
     const handleOnChange = (text) => {
         setSearchText(text)
     }

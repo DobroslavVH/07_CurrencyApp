@@ -15,7 +15,6 @@ const CountryCurrencyInfo = ({ countryCurrency, rowData }) => {
     const countryCode = countryCurrency?.T?.substring(5, 8).toLowerCase()
     const countryName = contriesInfoByCurrency?.find(info => info?.currency === shortCurrencyName)?.country
     const currencyValue = countryCurrency?.l?.toFixed(3)
-    const fullCurrencyName = contriesInfoByCurrency?.find(info => info?.currency === shortCurrencyName)?.name
 
     const onPress = () => {
         navigation.navigate('CurrencyDetails', { countryCurrency: countryCurrency, rowData: rowData })

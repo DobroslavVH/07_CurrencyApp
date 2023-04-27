@@ -34,13 +34,6 @@ const CurrencyProvider = ({ children }) => {
         })
     }
 
-    const setExchangeTransactions = transaction => {
-        dispatch({
-            type: ACTIONS.SET_EXCHANGE_TRANSACTIONS,
-            payload: transaction
-        })
-    }
-
     return (
         <CurrencyContext.Provider
             value={{
@@ -48,8 +41,7 @@ const CurrencyProvider = ({ children }) => {
                 setCurrency,
                 setSecondaryCurrency,
                 setTickersInfo,
-                setDate,
-                setExchangeTransactions
+                setDate
             }}
         >
             {children}
